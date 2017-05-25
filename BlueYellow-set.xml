@@ -128,7 +128,7 @@
 	<settings>
 		<default-bank-limit>30</default-bank-limit> <!-- Set the Default Bank Limit -->
 		<enable-cws>0</enable-cws> <!-- Enable/Disable CWS -->
-		<land-enable>1</land-enable> <!-- Enable/Disable Autoland -->
+		<land-enable>0</land-enable> <!-- Enable/Disable Autoland -->
 		<land-flap>0.667</land-flap> <!-- Minimum Flap used for Landing -->
 		<retard-ft>40</retard-ft> <!-- Enable Thrust Retard -->
 		<retard-enable>1</retard-enable> <!-- AGL to Thrust Retard -->

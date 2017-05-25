@@ -103,7 +103,7 @@ Boeing C-32J YaSim Aerodynamics which I used because I don't care enough to make
 	</thruster>
 
 	<!-- Nosegear -->
-	<gear x="-5.778" y="0.0" z="-3.37" compression="0.25" spring="0.7" damp="4.0" sfric="0.99">
+	<gear x="-5.778" y="0.0" z="0.141" compression="0.25" spring="0.7" damp="4.0" sfric="0.99">
 		<control-input axis="/controls/flight/rudder" control="STEER" square="true" />
 		<control-input axis="/controls/gear/gear-down" control="EXTEND" />
 		<control-output control="EXTEND" prop="/gear/gear[0]/position-norm" />
@@ -111,7 +111,7 @@ Boeing C-32J YaSim Aerodynamics which I used because I don't care enough to make
 		<control-speed control="EXTEND" transition-time="8.0" />
 	</gear>
 	<!-- Left main gear forward -->
-	<gear x="-23.484" y="3.768" z="-3.37" compression="0.6">
+	<gear x="-23.484" y="3.768" z="0.141" compression="0.6">
 		<control-input axis="/autopilot/autobrake/left-brake-output" control="BRAKE" />
 		<control-input axis="/controls/gear/brake-parking" control="BRAKE" />
 		<control-input axis="/controls/gear/gear-down" control="EXTEND" />
@@ -119,7 +119,7 @@ Boeing C-32J YaSim Aerodynamics which I used because I don't care enough to make
 		<control-speed control="EXTEND" transition-time="8.0" />
 	</gear>
 	<!-- Left main gear aft -->
-	<gear x="-24.653" y="3.768" z="-3.37" compression="0.6">
+	<gear x="-24.653" y="3.768" z="0.141" compression="0.6">
 		<control-input axis="/autopilot/autobrake/left-brake-output" control="BRAKE" />
 		<control-input axis="/controls/gear/brake-parking" control="BRAKE" />
 		<control-input axis="/controls/gear/gear-down" control="EXTEND" />
@@ -127,7 +127,7 @@ Boeing C-32J YaSim Aerodynamics which I used because I don't care enough to make
 		<control-speed control="EXTEND" transition-time="8.0" />
 	</gear>
 	<!-- Right main gear forward -->
-	<gear x="-23.484" y="-3.768" z="-3.37" compression="0.6">
+	<gear x="-23.484" y="-3.768" z="0.141" compression="0.6">
 		<control-input axis="/autopilot/autobrake/right-brake-output" control="BRAKE" />
 		<control-input axis="/controls/gear/brake-parking" control="BRAKE" />
 		<control-input axis="/controls/gear/gear-down" control="EXTEND" />
@@ -135,7 +135,7 @@ Boeing C-32J YaSim Aerodynamics which I used because I don't care enough to make
 		<control-speed control="EXTEND" transition-time="8.0" />
 	</gear>
 	<!-- Right main gear aft -->
-	<gear x="-24.653" y="-3.768" z="-3.37" compression="0.6">
+	<gear x="-24.653" y="-3.768" z="0.141" compression="0.6">
 		<control-input axis="/autopilot/autobrake/right-brake-output" control="BRAKE" />
 		<control-input axis="/controls/gear/brake-parking" control="BRAKE" />
 		<control-input axis="/controls/gear/gear-down" control="EXTEND" />
