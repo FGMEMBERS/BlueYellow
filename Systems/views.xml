@@ -2,7 +2,7 @@
 
 <PropertyList>
 
-	<chase-distance-m type="double" archive="y">-50.0</chase-distance-m>
+	<chase-distance-m type="double" archive="y">-30.0</chase-distance-m>
 
 	<view n="0">
 		<name>Cockpit</name>
