@@ -54,20 +54,26 @@
 		<setting>0.833</setting>
 		<setting>1.000</setting>
 	</flaps>
-
-	<weight n="0">
-		<name>Crew</name>
-		<weight-lb>360</weight-lb> 
-		<max-lb>500</max-lb>
-		<min-lb>300</min-lb>
-	</weight>
-
-	<weight n="1">
-		<name>Passengers/Cargo</name>
-		<weight-lb>22000</weight-lb> 
-		<max-lb>40112</max-lb>
-		<min-lb>0</min-lb>      
-	</weight>
+	
+	<consumables>
+		<fuel>
+			<tank n="0">
+				<name>LH Main</name>
+			</tank>
+			<tank n="1">
+				<name>RH Main</name>
+			</tank>
+			<tank n="2">
+				<name>Center</name>
+			</tank>
+			<tank n="3">
+				<name>Fwd Aux</name>
+			</tank>
+			<tank n="4">
+				<name>Aft Aux</name>
+			</tank>
+		</fuel>
+	</consumables>
 
 	<menubar>
 		<default>
