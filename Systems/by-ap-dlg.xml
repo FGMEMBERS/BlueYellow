@@ -32,8 +32,16 @@
 	<group>
 		<layout>hbox</layout>
 		<button>
+			<legend>AT</legend>
+            <pref-width>110</pref-width>
+			<binding>
+			<command>property-toggle</command>
+			<property>/it-autoflight/output/at</property>
+			</binding>
+		</button>
+		<button>
 			<legend>AUTOPILOT</legend>
-            <pref-width>240</pref-width>
+            <pref-width>130</pref-width>
 			<binding>
 			<command>property-toggle</command>
 			<property>/it-autoflight/input/ap</property>
@@ -43,6 +51,15 @@
 	
 	<group>
 		<layout>hbox</layout>
+		<text>
+			<label>[AT]</label>
+			<visible>
+				<equals>
+					<property>/it-autoflight/output/at</property>
+					<value>1</value>
+				</equals>
+			</visible>
+		</text>
 		<text>
 			<label>[AUTOPILOT]</label>
 			<visible>
@@ -214,6 +231,105 @@
 					</or>
 				</visible>
 			</text>
+		</group>
+		
+		<group>
+			<layout>hbox</layout>
+
+			<hrule>
+				<stretch type="bool">true</stretch>
+			</hrule>
+			<text>
+				<label>Thrust Mode</label>
+			</text>
+			<hrule>
+				<stretch type="bool">true</stretch>
+			</hrule>
+		</group>
+		
+		<group>
+			<layout>table</layout>
+			
+			<text>
+				<row>0</row>
+				<col>0</col>
+				<label>SPD:  </label>
+			</text>
+			
+			<button>
+				<row>0</row>
+				<col>1</col>
+                <pref-width>25</pref-width>
+                <pref-height>25</pref-height>
+				<legend>&lt;&lt;</legend>
+				<binding>
+					<command>property-adjust</command>
+					<property>/it-autoflight/input/spd-kts</property>
+					<min>0</min>
+					<max>380</max>
+					<step>-10</step>
+					<wrap>false</wrap>
+				</binding>
+			</button>
+			<button>
+				<row>0</row>
+				<col>2</col>
+                <pref-width>25</pref-width>
+                <pref-height>25</pref-height>
+				<legend>&lt;</legend>
+				<binding>
+					<command>property-adjust</command>
+					<property>/it-autoflight/input/spd-kts</property>
+					<min>0</min>
+					<max>380</max>
+					<step>-1</step>
+					<wrap>false</wrap>
+				</binding>
+			</button>
+
+			<input>
+				<row>0</row>
+				<col>3</col>
+                <pref-width>50</pref-width>
+				<property>/it-autoflight/input/spd-kts</property>
+				<live type="bool">true</live>
+				<binding>
+					<command>dialog-apply</command>
+				</binding>
+			</input>
+			
+			<button>
+				<row>0</row>
+				<col>4</col>
+                <pref-width>25</pref-width>
+                <pref-height>25</pref-height>
+				<legend>&gt;</legend>
+				<binding>
+					<command>property-adjust</command>
+					<property>/it-autoflight/input/spd-kts</property>
+					<min>0</min>
+					<max>380</max>
+					<step>1</step>
+					<wrap>false</wrap>
+				</binding>
+			</button>
+			<button>
+				<row>0</row>
+				<col>5</col>
+				<halign>left</halign>
+                <pref-width>25</pref-width>
+                <pref-height>25</pref-height>
+				<legend>&gt;&gt;</legend>
+				<binding>
+					<command>property-adjust</command>
+					<property>/it-autoflight/input/spd-kts</property>
+					<min>0</min>
+					<max>380</max>
+					<step>10</step>
+					<wrap>false</wrap>
+				</binding>
+			</button>
+			
 		</group>
 
 		<group>
