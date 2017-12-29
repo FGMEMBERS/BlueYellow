@@ -124,6 +124,7 @@
 		<enable-stby>0</enable-stby> <!-- If disabled, LVL and V/S become active when AP on. -->
 		<pitch-mode>2</pitch-mode> <!-- 0 = Elevator trim only, 1 = Elevator only, 2 = Elevator and Autotrim -->
 		<auto-arm-alt>1</auto-arm-alt> <!-- Enable automatic altitude arm -->
+		<bank-limit>25</bank-limit> <!-- Set the bank limit -->
 	</settings>
 </it-autoflight>
 
