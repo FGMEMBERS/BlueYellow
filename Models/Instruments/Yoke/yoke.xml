@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+	
+	<path>yoke.ac</path>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>YokeColL</object-name>
+		<object-name>YokeL</object-name>
+		<object-name>YokeTrimL</object-name>
+		<object-name>apoff</object-name>
+		<property>controls/flight/elevator</property>
+		<factor>-12</factor>
+		<center>
+			<x-m>2.626</x-m>
+			<y-m>0.0</y-m>
+			<z-m>0.230</z-m>
+		</center>
+		<axis>
+			<x>0.0</x>
+			<y>1.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>YokeL</object-name>
+		<object-name>YokeTrimL</object-name>
+		<object-name>apoff</object-name>
+		<property>controls/flight/aileron</property>
+		<factor>90</factor>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0.8715</z-m>
+		</center>
+		<axis>
+			<x>-1.0</x>
+			<y>0.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>pick</type>
+		<object-name>apoff</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-assign</command>
+				<property>it-autoflight/input/ap1</property>
+				<value>0</value>
+			</binding>
+			<binding>
+				<command>property-assign</command>
+				<property>it-autoflight/input/ap2</property>
+				<value>0</value>
+			</binding>
+			<binding>
+				<command>property-assign</command>
+				<property>controls/flight/apoff</property>
+				<value>1</value>
+			</binding>
+			<mod-up>
+				<binding>
+					<command>property-assign</command>
+					<property>controls/flight/apoff</property>
+					<value>0</value>
+				</binding>
+			</mod-up>
+		</action>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>apoff</object-name>
+		<property>controls/flight/apoff</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>-0.001</dep></entry>
+			<entry><ind>1</ind><dep> 0.001</dep></entry>
+		</interpolation>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+</PropertyList>

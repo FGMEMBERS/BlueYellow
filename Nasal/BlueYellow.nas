@@ -1,10 +1,4 @@
 # BlueYellow Stuff
-# Joshua Davidson (it0uchpods)
+# Copyright (c) 2020 Josh Davidson (Octal450)
 
-setlistener("/sim/signals/fdm-initialized", func {
-	itaf.ap_init();
-	var autopilot = gui.Dialog.new("sim/gui/dialogs/autopilot/dialog", "Aircraft/BlueYellow/Systems/by-ap-dlg.xml");
-	setprop("/it-autoflight/input/spd-kts", 250);
-	setprop("/it-autoflight/input/alt", 10000);
-	setprop("/it-autoflight/internal/alt", 10000);
-});
+print("If you are reading this, you are awesome. Seriously.");

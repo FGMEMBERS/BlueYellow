@@ -47,11 +47,11 @@
   <condition>
     <or>
       <less-than-equals>
-        <property>/consumables/fuel/tank[0]/level-lbs</property>
+        <property>consumables/fuel/tank[0]/level-lbs</property>
         <value>2500</value>
       </less-than-equals>
       <less-than-equals>
-        <property>/consumables/fuel/tank[1]/level-lbs</property>
+        <property>consumables/fuel/tank[1]/level-lbs</property>
         <value>2500</value>
       </less-than-equals>
     </or>
@@ -62,7 +62,7 @@
   <type>select</type>
   <object-name>AnnBattOff</object-name>
   <condition>
-    <not><property>/controls/switches/battery</property></not>
+    <not><property>controls/switches/battery</property></not>
   </condition>
 </animation>
 
@@ -70,7 +70,7 @@
   <type>select</type>
   <object-name>AnnEngValveL</object-name>
   <condition>
-    <property>/controls/pneumatic/engine[0]/bleed</property>
+    <property>controls/pneumatic/engine[0]/bleed</property>
   </condition>
 </animation>
 
@@ -78,7 +78,7 @@
   <type>select</type>
   <object-name>AnnEngValveR</object-name>
   <condition>
-    <property>/controls/pneumatic/engine[1]/bleed</property>
+    <property>controls/pneumatic/engine[1]/bleed</property>
   </condition>
 </animation>
 
@@ -86,7 +86,7 @@
   <type>select</type>
   <object-name>AnnStartValveL</object-name>
   <condition>
-    <property>/controls/switches/eng-start[0]/position</property>
+    <property>controls/switches/eng-start[0]/position</property>
   </condition>
 </animation>
 
@@ -94,7 +94,7 @@
   <type>select</type>
   <object-name>AnnStartValveR</object-name>
   <condition>
-    <property>/controls/switches/eng-start[1]/position</property>
+    <property>controls/switches/eng-start[1]/position</property>
   </condition>
 </animation>
 
@@ -102,7 +102,7 @@
   <type>select</type>
   <object-name>AnnFuelPressL</object-name>
   <condition>
-    <not><property>/systems/fuel/tank[0]/fuel-press</property></not>
+    <not><property>systems/fuel/tank[0]/fuel-press</property></not>
   </condition>
 </animation>
 
@@ -110,7 +110,7 @@
   <type>select</type>
   <object-name>AnnFuelPressR</object-name>
   <condition>
-    <not><property>/systems/fuel/tank[1]/fuel-press</property></not>
+    <not><property>systems/fuel/tank[1]/fuel-press</property></not>
   </condition>
 </animation>
 
@@ -119,7 +119,7 @@
   <object-name>AnnSpoilGnd</object-name>
   <condition>
     <equals>
-      <property>/controls/flight/spoilers-master</property>
+      <property>controls/flight/spoilers-master</property>
       <value>1</value>
     </equals>
   </condition>
@@ -129,7 +129,7 @@
   <type>select</type>
   <object-name>AnnSpoilExt</object-name>
   <condition>
-    <property>/controls/flight/spoilers-master</property>
+    <property>controls/flight/spoilers-master</property>
   </condition>
 </animation>
 
@@ -137,7 +137,7 @@
   <type>select</type>
   <object-name>AnnParkBrake</object-name>
   <condition>
-    <property>/controls/gear/brake-parking</property>
+    <property>controls/gear/brake-parking</property>
   </condition>
 </animation>
 

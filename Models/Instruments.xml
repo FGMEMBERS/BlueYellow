@@ -1,159 +1,166 @@
 <?xml version="1.0"?>
 
 <PropertyList>
+	
+	<model>
+		<name>yoke</name>
+		<path>Aircraft/BlueYellow/Models/Instruments/Yoke/yoke.xml</path>
+		<offsets>
+			<x-m>-0.1</x-m>
+			<y-m>-0.26</y-m>
+			<z-m>-0.15</z-m>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>asi</name>
+		<path>Aircraft/BlueYellow/Models/Instruments/asi.xml</path>
+		<offsets>
+			<x-m>2.226</x-m>
+			<y-m>-0.401</y-m>
+			<z-m>0.868</z-m>
+			<pitch-deg>-12</pitch-deg>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>rmi</name>
+		<path>Aircraft/BlueYellow/Models/Instruments/rmi.xml</path>
+		<offsets>
+			<x-m>2.248</x-m>
+			<y-m>-0.389</y-m>
+			<z-m>0.765</z-m>
+			<pitch-deg>-12</pitch-deg>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>att</name>
+		<path>Aircraft/BlueYellow/Models/Instruments/att/att1.xml</path>
+		<offsets>
+			<x-m>2.225</x-m>
+			<y-m>-0.263</y-m>
+			<z-m>0.876</z-m>
+			<pitch-deg>-12</pitch-deg>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>hsi</name>
+		<path>Aircraft/BlueYellow/Models/Instruments/hsi/hsi1.xml</path>
+		<offsets>
+			<x-m>2.254</x-m>
+			<y-m>-0.263</y-m>
+			<z-m>0.740</z-m>
+			<pitch-deg>-12</pitch-deg>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>alt</name>
+		<path>Aircraft/BlueYellow/Models/Instruments/altimeter1.xml</path>
+		<offsets>
+		<x-m>2.229</x-m>
+		<y-m>-0.140</y-m>
+		<z-m>0.856</z-m>
+		<pitch-deg>-12</pitch-deg>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>vsi</name>
+		<path>Aircraft/BlueYellow/Models/Instruments/vsi.xml</path>
+		<offsets>
+		<x-m>2.250</x-m>
+		<y-m>-0.134</y-m>
+		<z-m>0.7635</z-m>
+		<pitch-deg>-12</pitch-deg>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>revthrust_indicators</name>
+		<path>Aircraft/BlueYellow/Models/Instruments/revthrust_ind.xml</path>
+		<offsets>
+			<x-m>2.205</x-m>
+			<y-m>0.007</y-m>
+			<z-m>0.861</z-m>
+			<pitch-deg>-12</pitch-deg>
+		</offsets>
+	</model>
 
-<model>
-  <name>asi</name>
-  <path>Aircraft/BlueYellow/Models/Instruments/asi.xml</path>
-  <offsets>
-    <x-m>2.226</x-m>
-    <y-m>-0.401</y-m>
-    <z-m>0.868</z-m>
-    <pitch-deg>-12</pitch-deg>
-  </offsets>
-</model>
+	<model>
+		<name>n1L</name>
+		<path>Aircraft/BlueYellow/Models/Instruments/n1L.xml</path>
+		<offsets>
+			<x-m>2.221</x-m>
+			<y-m>-0.023</y-m>
+			<z-m>0.899</z-m>
+			<pitch-deg>-12</pitch-deg>
+		</offsets>
+	</model>
+	<model>
+		<name>n1R</name>
+		<path>Aircraft/BlueYellow/Models/Instruments/n1R.xml</path>
+		<offsets>
+			<x-m>2.221</x-m>
+			<y-m>0.037</y-m>
+			<z-m>0.899</z-m>
+			<pitch-deg>-12</pitch-deg>
+		</offsets>
+	</model>
 
-<model>
-  <name>rmi</name>
-  <path>Aircraft/BlueYellow/Models/Instruments/rmi.xml</path>
-  <offsets>
-    <x-m>2.248</x-m>
-    <y-m>-0.389</y-m>
-    <z-m>0.765</z-m>
-    <pitch-deg>-12</pitch-deg>
-  </offsets>
-</model>
+	<model>
+		<name>egtL</name>
+		<path>Aircraft/BlueYellow/Models/Instruments/egtL.xml</path>
+		<offsets>
+			<x-m>2.233</x-m>
+			<y-m>-0.023</y-m>
+			<z-m>0.841</z-m>
+			<pitch-deg>-12</pitch-deg>
+		</offsets>
+	</model>
+	<model>
+		<name>egtR</name>
+		<path>Aircraft/BlueYellow/Models/Instruments/egtR.xml</path>
+		<offsets>
+			<x-m>2.233</x-m>
+			<y-m>0.037</y-m>
+			<z-m>0.841</z-m>
+			<pitch-deg>-12</pitch-deg>
+		</offsets>
+	</model>
 
-<model>
-  <name>att</name>
-  <path>Aircraft/BlueYellow/Models/Instruments/att/att1.xml</path>
-  <offsets>
-    <x-m>2.225</x-m>
-    <y-m>-0.263</y-m>
-    <z-m>0.876</z-m>
-    <pitch-deg>-12</pitch-deg>
-  </offsets>
-</model>
+	<model>
+		<name>n2L</name>
+		<path>Aircraft/BlueYellow/Models/Instruments/n2L.xml</path>
+		<offsets>
+			<x-m>2.245</x-m>
+			<y-m>-0.023</y-m>
+			<z-m>0.783</z-m>
+			<pitch-deg>-12</pitch-deg>
+		</offsets>
+	</model>
+	<model>
+		<name>n2R</name>
+		<path>Aircraft/BlueYellow/Models/Instruments/n2R.xml</path>
+		<offsets>
+			<x-m>2.245</x-m>
+			<y-m>0.037</y-m>
+			<z-m>0.783</z-m>
+			<pitch-deg>-12</pitch-deg>
+		</offsets>
+	</model>
 
-<model>
-  <name>hsi</name>
-  <path>Aircraft/BlueYellow/Models/Instruments/hsi/hsi1.xml</path>
-  <offsets>
-	<x-m>2.254</x-m>
-	<y-m>-0.263</y-m>
-	<z-m>0.740</z-m>
-    <pitch-deg>-12</pitch-deg>
-  </offsets>
-</model>
+	<model>
+		<name>flap</name>
+		<path>Aircraft/BlueYellow/Models/Instruments/Flaps/flaps.xml</path>
+		<offsets>
+			<x-m>2.245</x-m>
+			<y-m>0.01</y-m>
+			<z-m>0.723</z-m>
+			<pitch-deg>-12</pitch-deg>
+		</offsets>
+	</model>
 
-<model>
-  <name>alt</name>
-  <path>Aircraft/BlueYellow/Models/Instruments/altimeter1.xml</path>
-  <offsets>
-    <x-m>2.229</x-m>
-    <y-m>-0.140</y-m>
-    <z-m>0.856</z-m>
-    <pitch-deg>-12</pitch-deg>
-  </offsets>
-</model>
-
-<model>
-  <name>vsi</name>
-  <path>Aircraft/BlueYellow/Models/Instruments/vsi.xml</path>
-  <offsets>
-	<x-m>2.250</x-m>
-    <y-m>-0.134</y-m>
-    <z-m>0.7635</z-m>
-    <pitch-deg>-12</pitch-deg>
-  </offsets>
-</model>
-
-<!-- Center Panel -->
-
-<model>
-  <name>revthrust_indicators</name>
-  <path>Aircraft/BlueYellow/Models/Instruments/revthrust_ind.xml</path>
-  <offsets>
-    <x-m>2.205</x-m>
-    <y-m>0.007</y-m>
-    <z-m>0.861</z-m>
-    <pitch-deg>-12</pitch-deg>
-  </offsets>
-</model>
-
-<model>
-  <name>n1L</name>
-  <path>Aircraft/BlueYellow/Models/Instruments/n1L.xml</path>
-  <offsets>
-    <x-m>2.221</x-m>
-    <y-m>-0.023</y-m>
-    <z-m>0.899</z-m>
-    <pitch-deg>-12</pitch-deg>
-  </offsets>
-</model>
-<model>
-  <name>n1R</name>
-  <path>Aircraft/BlueYellow/Models/Instruments/n1R.xml</path>
-  <offsets>
-    <x-m>2.221</x-m>
-    <y-m>0.037</y-m>
-    <z-m>0.899</z-m>
-    <pitch-deg>-12</pitch-deg>
-  </offsets>
-</model>
-
-<model>
-  <name>egtL</name>
-  <path>Aircraft/BlueYellow/Models/Instruments/egtL.xml</path>
-  <offsets>
-    <x-m>2.233</x-m>
-    <y-m>-0.023</y-m>
-    <z-m>0.841</z-m>
-    <pitch-deg>-12</pitch-deg>
-  </offsets>
-</model>
-<model>
-  <name>egtR</name>
-  <path>Aircraft/BlueYellow/Models/Instruments/egtR.xml</path>
-  <offsets>
-    <x-m>2.233</x-m>
-    <y-m>0.037</y-m>
-    <z-m>0.841</z-m>
-    <pitch-deg>-12</pitch-deg>
-  </offsets>
-</model>
-
-<model>
-  <name>n2L</name>
-  <path>Aircraft/BlueYellow/Models/Instruments/n2L.xml</path>
-  <offsets>
-    <x-m>2.245</x-m>
-    <y-m>-0.023</y-m>
-    <z-m>0.783</z-m>
-    <pitch-deg>-12</pitch-deg>
-  </offsets>
-</model>
-<model>
-  <name>n2R</name>
-  <path>Aircraft/BlueYellow/Models/Instruments/n2R.xml</path>
-  <offsets>
-    <x-m>2.245</x-m>
-    <y-m>0.037</y-m>
-    <z-m>0.783</z-m>
-    <pitch-deg>-12</pitch-deg>
-  </offsets>
-</model>
-
-<model>
-  <name>flap</name>
-  <path>Aircraft/BlueYellow/Models/Instruments/Flaps/flaps.xml</path>
-  <offsets>
-    <x-m>2.245</x-m>
-    <y-m>0.01</y-m>
-    <z-m>0.723</z-m>
-    <pitch-deg>-12</pitch-deg>
-  </offsets>
-</model>
 </PropertyList>
-
-

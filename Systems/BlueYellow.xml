@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+
+<!-- Copyright (c) 2020 Joshua Davidson (Octal450) -->
+
+<PropertyList>
+	
+	<logic>
+		<input>
+			<or>
+				<equals>
+					<property>/gear/gear[0]/wow</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>/gear/gear[1]/wow</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>/gear/gear[2]/wow</property>
+					<value>1</value>
+				</equals>
+				<less-than-equals>
+					<property>/position/gear-agl-ft</property>
+					<value>100</value>
+				</less-than-equals>
+			</or>
+		</input>
+		<output>/controls/gear/gear-down</output>
+	</logic>
+	
+	<predict-simple>
+		<name>Gear AGL Altitude</name>
+		<debug>false</debug>
+		<input>/position/gear-agl-ft</input>
+		<output>/position/gear-agl-ft-2-sec</output>
+		<seconds>2.0</seconds>
+		<filter-gain>0.0</filter-gain>
+	</predict-simple>
+	
+	<!-- Elevator Control -->
+	<filter>
+		<name>Aileron Final</name>
+		<type>noise-spike</type>
+		<input>/controls/flight/aileron</input>
+		<output>/controls/flight/aileron-fbw</output>
+		<min>-1.0</min>
+		<max>1.0</max>
+		<max-rate-of-change>3</max-rate-of-change>
+	</filter>
+	
+	<filter>
+		<name>Elevator Final</name>
+		<type>noise-spike</type>
+		<input>/controls/flight/elevator</input>
+		<output>/controls/flight/elevator-fbw</output>
+		<min>-1.0</min>
+		<max>1.0</max>
+		<max-rate-of-change>3</max-rate-of-change>
+	</filter>
+	
+	<filter>
+		<name>Rudder Final</name>
+		<type>noise-spike</type>
+		<input>/controls/flight/rudder</input>
+		<output>/controls/flight/rudder-fbw</output>
+		<min>-1.0</min>
+		<max>1.0</max>
+		<max-rate-of-change>3</max-rate-of-change>
+	</filter>
+
+</PropertyList>
