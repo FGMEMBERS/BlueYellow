@@ -131,6 +131,14 @@
 					<script>gui.popupTip("Gear is automatic in this plane");</script>
 				</binding>
 			</key>
+			<key n="103">
+				<name>g</name>
+				<desc>Kill Gear</desc>
+				<binding>
+					<command>nasal</command>
+					<script>gui.popupTip("Gear is automatic in this plane");</script>
+				</binding>
+			</key>
 			<key n="127">
 				<name>Delete</name>
 				<desc>Toggle Reversers</desc>
