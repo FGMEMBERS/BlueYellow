@@ -189,14 +189,14 @@
 			<autothrottle-min>0.02</autothrottle-min> <!-- Thrust Low Limit Normalized -->
 			<custom-fma>0</custom-fma> <!-- Call functions when modes change for a custom FMA to be implemented --> 
 			<disable-final>0</disable-final> <!-- Disable the Final Controllers, for custom FCS integration -->
-			<hdg-hld-separate>1</hdg-hld-separate> <!-- Seperates the HDG HLD mode from the HDG SEL mode -->
+			<hdg-hld-separate>0</hdg-hld-separate> <!-- Seperates the HDG HLD mode from the HDG SEL mode -->
 			<land-enable>1</land-enable> <!-- Enable/Disable Autoland -->
 			<land-flap>0.667</land-flap> <!-- Minimum Flap used for Landing -->
 			<retard-ft>50</retard-ft> <!-- Enable Thrust Retard -->
 			<retard-enable>1</retard-enable> <!-- AGL to Thrust Retard -->
 			<togaspd>160</togaspd> <!-- V2 + 10kts -->
 			<lat-agl-ft>50</lat-agl-ft> <!-- AGL when LNAV becomes active if armed -->
-			<reduc-agl-ft>1500</reduc-agl-ft> <!-- AGL when T/O CLB changes to SPD CLB (FLCH), set to 0 to disable -->
+			<reduc-agl-ft>1000</reduc-agl-ft> <!-- AGL when T/O CLB changes to SPD CLB (FLCH), set to 0 to disable -->
 		</settings>
 	</it-autoflight>
 	

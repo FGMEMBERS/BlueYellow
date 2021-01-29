@@ -45,7 +45,7 @@
         <object-name>FDpitch</object-name>
         <object-name>FDpitch_rembrandt</object-name>
         <property>it-autoflight/fd/pitch-bar</property>
-        <factor>0.0005</factor>
+        <factor>0.00093</factor>
         <axis>
             <x>0</x>
             <y>0</y>

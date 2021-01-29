@@ -1,5 +1,5 @@
-# IT-AUTOFLIGHT System Controller V4.0.6
-# Copyright (c) 2020 Josh Davidson (Octal450)
+# IT-AUTOFLIGHT System Controller V4.0.7
+# Copyright (c) 2021 Josh Davidson (Octal450)
 
 setprop("/it-autoflight/config/tuning-mode", 0); # Not used by controller
 
@@ -88,8 +88,8 @@ var Input = {
 	ap2: props.globals.initNode("/it-autoflight/input/ap2", 0, "BOOL"),
 	athr: props.globals.initNode("/it-autoflight/input/athr", 0, "BOOL"),
 	altDiff: 0,
-	bankLimitSW: props.globals.initNode("/it-autoflight/input/bank-limit-sw", 0, "INT"),
-	bankLimitSWTemp: 0,
+	bankLimitSw: props.globals.initNode("/it-autoflight/input/bank-limit-sw", 0, "INT"),
+	bankLimitSwTemp: 0,
 	fd1: props.globals.initNode("/it-autoflight/input/fd1", 0, "BOOL"),
 	fd2: props.globals.initNode("/it-autoflight/input/fd2", 0, "BOOL"),
 	fpa: props.globals.initNode("/it-autoflight/input/fpa", 0, "DOUBLE"),
@@ -210,7 +210,7 @@ var ITAF = {
 	init: func(t = 0) { # Not everything should be reset if the reset is type 1
 		if (t != 1) {
 			Input.alt.setValue(10000);
-			Input.bankLimitSW.setValue(0);
+			Input.bankLimitSw.setValue(0);
 			Input.hdg.setValue(360);
 			Input.ktsMach.setBoolValue(0);
 			Input.kts.setValue(250);
@@ -239,8 +239,8 @@ var ITAF = {
 			Output.fd2.setBoolValue(0);
 		}
 		Output.hdgInHld.setBoolValue(0);
-		Output.lnavArm.setBoolValue(0);
-		Output.locArm.setBoolValue(0);
+		me.updateLnavArm(0);
+		me.updateLocArm(0);
 		Output.apprArm.setBoolValue(0);
 		Output.thrMode.setValue(2);
 		Output.lat.setValue(5);
@@ -398,7 +398,7 @@ var ITAF = {
 		me.updateThrustMode();
 	},
 	slowLoop: func() {
-		Input.bankLimitSWTemp = Input.bankLimitSW.getValue();
+		Input.bankLimitSwTemp = Input.bankLimitSw.getValue();
 		Velocities.trueAirspeedKtTemp = Velocities.trueAirspeedKt.getValue();
 		FPLN.activeTemp = FPLN.active.getValue();
 		FPLN.currentWpTemp = FPLN.currentWp.getValue();
@@ -413,8 +413,8 @@ var ITAF = {
 			Internal.bankLimitAuto = 30;
 		}
 		
-		if (Internal.bankLimitAuto > Internal.bankLimitMax[Input.bankLimitSWTemp]) {
-			Internal.bankLimit.setValue(Internal.bankLimitMax[Input.bankLimitSWTemp]);
+		if (Internal.bankLimitAuto > Internal.bankLimitMax[Input.bankLimitSwTemp]) {
+			Internal.bankLimit.setValue(Internal.bankLimitMax[Input.bankLimitSwTemp]);
 		} else {
 			Internal.bankLimit.setValue(Internal.bankLimitAuto);
 		}
@@ -688,6 +688,7 @@ var ITAF = {
 				Internal.altCaptureActive = 0;
 				Output.vert.setValue(4);
 				Internal.flchActive = 1;
+				Internal.alt.setValue(Input.alt.getValue());
 				me.updateThrustMode();
 			} else { # ALT CAP
 				Internal.flchActive = 0;
@@ -745,13 +746,13 @@ var ITAF = {
 			if (Internal.alt.getValue() >= Position.indicatedAltitudeFt.getValue()) {
 				Output.thrMode.setValue(2);
 				Text.thr.setValue("PITCH");
-				if (Internal.flchActive and Text.vert.getValue() != "SPD CLB") { # Set before mode change to prevent it from overwriting by mistake
+				if (Internal.flchActive and Text.vert.getValue() != "SPD CLB") {
 					me.updateVertText("SPD CLB");
 				}
 			} else {
 				Output.thrMode.setValue(1);
 				Text.thr.setValue("PITCH");
-				if (Internal.flchActive and Text.vert.getValue() != "SPD DES") { # Set before mode change to prevent it from overwriting by mistake
+				if (Internal.flchActive and Text.vert.getValue() != "SPD DES") {
 					me.updateVertText("SPD DES");
 				}
 			}
@@ -794,10 +795,14 @@ var ITAF = {
 		}
 	},
 	checkLnav: func(t) {
-		if (FPLN.num.getValue() > 0 and FPLN.active.getBoolValue() and Position.gearAglFt.getValue() >= Settings.latAglFt.getValue()) {
+		FPLN.activeTemp = FPLN.active.getBoolValue();
+		if (FPLN.num.getValue() > 0 and FPLN.activeTemp and Position.gearAglFt.getValue() >= Settings.latAglFt.getValue()) {
 			me.activateLnav();
-		} else if (FPLN.active.getBoolValue() and Output.lat.getValue() != 1 and t != 1) {
+		} else if (FPLN.activeTemp and Output.lat.getValue() != 1 and t != 1) {
 			me.updateLnavArm(1);
+		}
+		if (!FPLN.activeTemp) {
+			me.updateLnavArm(0);
 		}
 	},
 	checkFlch: func(a) {
@@ -818,8 +823,9 @@ var ITAF = {
 					me.updateLocArm(1);
 				}
 			}
-		} else { # Prevent bad behavior due to FG not updating it when not in range
-			Radio.signalQuality[Radio.radioSel].setValue(0);
+		} else {
+			Radio.signalQuality[Radio.radioSel].setValue(0); # Prevent bad behavior due to FG not updating it when not in range
+			me.updateLocArm(0);
 		}
 	},
 	checkAppr: func(t) {
@@ -833,8 +839,9 @@ var ITAF = {
 					me.updateApprArm(1);
 				}
 			}
-		} else { # Prevent bad behavior due to FG not updating it when not in range
-			Radio.signalQuality[Radio.radioSel].setValue(0);
+		} else {
+			Radio.signalQuality[Radio.radioSel].setValue(0); # Prevent bad behavior due to FG not updating it when not in range
+			me.updateApprArm(0);
 		}
 	},
 	checkRadioRevision: func(l, v) { # Revert mode if signal lost
