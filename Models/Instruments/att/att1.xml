@@ -58,7 +58,7 @@
         <object-name>FDroll</object-name>
         <object-name>FDroll_rembrandt</object-name>
         <property>it-autoflight/fd/roll-bar</property>
-        <factor>0.0002</factor>
+        <factor>0.0004</factor>
         <axis>
             <x>0</x>
             <y>1</y>
