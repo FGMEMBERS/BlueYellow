@@ -11,7 +11,7 @@
 			<and>
 				<equals>
 					<property>/sim/aircraft</property>
-					<value>BlueYellow</value>
+					<value>BlueYellowYa</value>
 				</equals>
 				<equals>
 					<property>/sim/current-view/internal</property>
