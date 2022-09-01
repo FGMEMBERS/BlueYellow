@@ -6,7 +6,6 @@
 	
 	<sim>
 		<aero>BlueYellowYa</aero>
-		<author>Josh Davidson (Octal450)</author>
 		<chase-distance-m type="double" archive="y">-30.0</chase-distance-m>
 		<consumables>
 			<fuel>
@@ -45,21 +44,6 @@
 		<instrumentation>
 			<path>Aircraft/BlueYellow/Systems/instrumentation.xml</path>
 		</instrumentation>
-		<menubar n="0">
-			<default n="0">
-				<menu n="100">
-					<label>BlueYellow</label>
-					<item>
-						<label>Pushback</label>
-						<name>pushback</name>
-						<binding>
-							<command>dialog-show</command>
-							<dialog-name>pushback</dialog-name>
-						</binding>
-					</item>
-				</menu>
-			</default>
-		</menubar>
 		<view n="0">
 			<name>Cockpit</name>
 			<type>lookfrom</type>
@@ -76,44 +60,5 @@
 			</config>
 		</view>
 	</sim>
-	
-	<controls n="0">
-		<gear n="0">
-			<brake-parking type="double">1.0</brake-parking>
-		</gear>
-	</controls>
-	
-	<input n="0">
-		<keyboard n="0">
-			<key n="71">
-				<name>G</name>
-				<desc>Kill Gear</desc>
-				<binding>
-					<command>nasal</command>
-					<script>gui.popupTip("Gear is automatic in this plane");</script>
-				</binding>
-			</key>
-			<key n="103">
-				<name>g</name>
-				<desc>Kill Gear</desc>
-				<binding>
-					<command>nasal</command>
-					<script>gui.popupTip("Gear is automatic in this plane");</script>
-				</binding>
-			</key>
-			<key n="127">
-				<name>Delete</name>
-				<desc>Toggle Reversers</desc>
-				<binding>
-					<command>property-toggle</command>
-					<property>controls/engines/engine[0]/reverser</property>
-				</binding>
-				<binding>
-					<command>property-toggle</command>
-					<property>controls/engines/engine[1]/reverser</property>
-				</binding>
-			</key>
-		</keyboard>
-	</input>
 
 </PropertyList>
